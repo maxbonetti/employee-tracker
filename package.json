@@ -1,16 +1,16 @@
 {
   "name": "employee-tracker",
   "version": "1.0.0",
-  "description": "SQL and Node application to track employee's",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Max Bonetti",
+  "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "inquirer": "^8.2.4",
     "pg": "^8.11.5",
     "pg-hstore": "^2.3.4",
