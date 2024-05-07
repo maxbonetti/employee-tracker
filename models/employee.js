@@ -1,12 +1,12 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../database'); // Ensure this points to your Sequelize configuration
+const sequelize = require('../database'); // Adjust this path based on the actual location of your database.js
 
 const Employee = sequelize.define('Employee', {
-    first_name: {
+    firstName: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    last_name: {
+    lastName: {
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -27,15 +27,5 @@ const Employee = sequelize.define('Employee', {
         }
     }
 });
-
-Employee.associate = (models) => {
-    Employee.belongsTo(models.Role, {
-        foreignKey: 'roleId'
-    });
-    Employee.belongsTo(models.Employee, {
-        as: 'Manager',
-        foreignKey: 'managerId'
-    });
-};
 
 module.exports = Employee;

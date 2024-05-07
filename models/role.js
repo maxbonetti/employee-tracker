@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../database'); // Ensure this is the correct path to your Sequelize instance
+const sequelize = require('../database'); // Adjust the path appropriately
 
 const Role = sequelize.define('Role', {
     title: {
@@ -15,16 +15,10 @@ const Role = sequelize.define('Role', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'Departments',
+            model: 'Departments', // Make sure this is the table name as Sequelize sees it
             key: 'id'
         }
     }
 });
-
-Role.associate = (models) => {
-    Role.belongsTo(models.Department, {
-        foreignKey: 'departmentId'
-    });
-};
 
 module.exports = Role;
