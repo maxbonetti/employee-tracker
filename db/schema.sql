@@ -1,5 +1,8 @@
+CREATE DATABASE database_db;
+\c database_db;
+
+
 -- Create a table for Departments
-\c postgres;
 CREATE TABLE IF NOT EXISTS Departments (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) UNIQUE NOT NULL
