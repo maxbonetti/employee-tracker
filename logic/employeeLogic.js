@@ -31,5 +31,3 @@ exports.addEmployee = async (firstName, lastName, roleId, managerId) => {
         console.error('Error adding employee:', error);
     }
 };
-
-// CAN WE CREATE A SCHEMA.SQL THAT SEEDS INTO THIS DATABASE JUST 5 DEPARTMENTS, 2 managers and 3 employees
