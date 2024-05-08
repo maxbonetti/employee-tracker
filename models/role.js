@@ -15,7 +15,7 @@ const Role = sequelize.define('Role', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'Departments', // Make sure this is the table name as Sequelize sees it
+            model: 'departments', // Make sure this is the table name as Sequelize sees it
             key: 'id'
         }
     }

@@ -14,7 +14,7 @@ const Employee = sequelize.define('Employee', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'Roles',
+            model: 'roles',
             key: 'id'
         }
     },
@@ -22,10 +22,15 @@ const Employee = sequelize.define('Employee', {
         type: DataTypes.INTEGER,
         allowNull: true,
         references: {
-            model: 'Employees',
+            model: 'employees',
             key: 'id'
         }
     }
-});
+}, 
+{
+sequelize,
+freezeTableName: true,
+}
+);
 
 module.exports = Employee;
