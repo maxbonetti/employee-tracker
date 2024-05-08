@@ -30,6 +30,7 @@ const Employee = sequelize.define('Employee', {
 {
 sequelize,
 freezeTableName: true,
+timestamps: false,
 }
 );
 

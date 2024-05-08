@@ -11,7 +11,8 @@ Department.init({
   }
 }, {
   sequelize,
-  modelName: 'Department'
+  modelName: 'department',
+  timestamps: false,
 });
 
 module.exports = Department;

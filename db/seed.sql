@@ -1,4 +1,4 @@
-INSERT INTO Departments (name) VALUES
+INSERT INTO departments (name) VALUES
 ('Human Resources'),
 ('Marketing'),
 ('Engineering'),
@@ -6,7 +6,7 @@ INSERT INTO Departments (name) VALUES
 ('Customer Service');
 
 -- Insert initial data into Employees, including managers
-INSERT INTO Employees (first_name, last_name, department_id, manager_id, role) VALUES
+INSERT INTO employees (first_name, last_name, department_id, manager_id, role) VALUES
 ('Alice', 'Smith', 1, NULL, 'Manager'), 
 ('Bob', 'Johnson', 2, NULL, 'Manager'), 
 ('Charlie', 'Brown', 3, 1, 'Developer'), 
@@ -14,8 +14,8 @@ INSERT INTO Employees (first_name, last_name, department_id, manager_id, role) V
 ('Donny', 'Sehr', 5, 2, 'Support'); 
 
 -- Insert initial data into Roles if using a separate Roles table
-INSERT INTO Roles (title, salary) VALUES
-('Manager', 150000),
-('Developer', 90000),
-('Tester', 12000),
-('Support', 55000);
+INSERT INTO roles (title, salary, department_id) VALUES
+('Manager', 150000, 1),
+('Developer', 90000, 3),
+('Tester', 12000, 3),
+('Support', 55000, 5);
