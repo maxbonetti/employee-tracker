@@ -6,7 +6,7 @@ exports.viewAllEmployees = async () => {
         const employees = await Employee.findAll({
             include: [
                 { model: Role, include: [{ model: Department }] },
-                { model: Employee, as: 'Manager', attributes: ['firstName', 'lastName'] }  // Assuming self-referencing is set up
+                { model: Employee, as: 'Manager', attributes: ['firstName', 'lastName'] }
             ]
         });
         console.table(employees.map(emp => ({
@@ -18,7 +18,7 @@ exports.viewAllEmployees = async () => {
             Manager: emp.Manager ? `${emp.Manager.firstName} ${emp.Manager.lastName}` : 'None'
         })));
     } catch (error) {
-        console.error('Error retrieving employees:', error);
+        console.error('Error retrieving employees:', error.message);
     }
 };
 
